@@ -4,6 +4,7 @@ import { useWindowWidth } from '/hooks/useWindowWidth';
 import { GlobalStyle } from '/styles/globalStyle';
 import { ThemeProvider } from 'styled-components';
 import { Theme as theme } from '/theme';
+import { NavBar } from '/components';
 
 function Main({ Component, pageProps }: AppProps) {
   const [Theme, setTheme] = useState(theme);
@@ -25,6 +26,7 @@ function Main({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
+      <NavBar/>
       <Component {...pageProps} />
     </ThemeProvider>
   );

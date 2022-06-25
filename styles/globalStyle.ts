@@ -14,6 +14,7 @@ const reset = css`
     background: ${({theme}) => theme.colors.background_100};
   }
 
+  header,
   body,
   h1,
   h2,
@@ -23,6 +24,7 @@ const reset = css`
   p,
   figure,
   blockquote,
+  ul,
   dl,
   dd {
     margin: unset;
@@ -43,6 +45,10 @@ const reset = css`
     :root {
       font-size: 20px;
     }
+  }
+
+  a, a:visited {
+    color: inherit;
   }
 
   *,

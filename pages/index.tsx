@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Grid, Col, Row } from '../components';
+import { Grid, Row } from '../components';
 
 const Home: NextPage = () => {
   return (
@@ -11,10 +11,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Grid>
-        <Row>
-          <Col>
-            <h1>Projects</h1>
-          </Col>
+        <Row center='xs'>
+          <h1>Projects</h1>
         </Row>
       </Grid>
 
