@@ -11,10 +11,10 @@ interface NavItemProps {
 export const NavItem:React.FC<NavItemProps> = (props) => {
   const { primary, href, children } = props;
   return (
-    <StyledNavItem primary={primary}>
+    <StyledNavItem data-testid="nav-item" primary={primary}>
       <Link href={href} passHref>
         <StyledAnchor>{children}</StyledAnchor>
       </Link>
     </StyledNavItem>
-  )
+  );
 }
