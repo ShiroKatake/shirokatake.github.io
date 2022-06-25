@@ -2,6 +2,7 @@ import { DefaultTheme } from "styled-components";
 import {
   breakpoints,
   colors,
+  flexboxgridMobile,
   mediaQueries,
   fontFamily,
 } from "theme";
@@ -9,6 +10,7 @@ import {
 export const Theme: DefaultTheme = {
   name: "Default Theme",
   fontFamily,
+  flexboxgrid: flexboxgridMobile,
   breakpoints,
   colors,
   mediaQueries,
