@@ -10,12 +10,14 @@ function Main({ Component, pageProps }: AppProps) {
   const windowWidth = useWindowWidth();
   
   useEffect(() => {
-    
     const init = async () => {
-      const getCurrentViewport = (await import('../utils/getCurrentViewport')).getCurrentViewport;
-      const flexboxViewport = getCurrentViewport(windowWidth);
-  
-      setTheme({ ...theme, flexboxgrid: { ...flexboxViewport } });
+      if (typeof window !== "undefined") {
+        console.log(typeof window);
+        const getCurrentViewport = (await import('../utils/getCurrentViewport')).getCurrentViewport;
+        const flexboxViewport = getCurrentViewport(windowWidth);
+    
+        setTheme({ ...theme, flexboxgrid: { ...flexboxViewport } });
+      }
     }
 
     init();
