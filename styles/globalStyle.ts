@@ -1,5 +1,8 @@
 import { createGlobalStyle, css } from "styled-components";
 import { typography } from "/theme";
+import { mediaQueries } from "/theme";
+
+const { xs, sm, md } = mediaQueries;
 
 const reset = css`
   body {
@@ -26,8 +29,20 @@ const reset = css`
     padding: unset;
   }
 
-  :root {
-    font-size: calc(15px + 0.2604167vw);
+  @media ${xs} {
+    :root {
+      font-size: 16px;
+    }
+  }
+  @media ${sm} {
+    :root {
+      font-size: 18px;
+    }
+  }
+  @media ${md} {
+    :root {
+      font-size: 20px;
+    }
   }
 
   *,
