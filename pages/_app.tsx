@@ -1,13 +1,14 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { NavBar } from '../components/NavBar';
+import { ThemeProvider } from 'styled-components';
+import { Theme as theme } from '/theme';
+import { GlobalStyle } from '/styles/globalStyle';
 
 function Main({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <NavBar />
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }
 
