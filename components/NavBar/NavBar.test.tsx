@@ -17,7 +17,7 @@ const primaryStyle = `
   color: ${colors.accent_300};
 `;
 
-describe("NavItem", () => {
+describe("NavBar", () => {
   afterEach(cleanup);
   
   it("should render correct number of nav items", () => {
