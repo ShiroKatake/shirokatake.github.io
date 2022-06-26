@@ -3,7 +3,7 @@ import { mediaQueries } from "../../theme";
 
 const { sm } = mediaQueries;
 
-export const StyledSocialBar = styled.div`
+export const StyledSocialBar = styled.aside`
   display: none;
   
   @media ${sm} {
