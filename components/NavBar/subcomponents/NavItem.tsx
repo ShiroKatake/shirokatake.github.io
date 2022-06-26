@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import React from 'react'
-import { StyledAnchor, StyledNavItem } from './NavItem.styled'
+import React from 'react';
+import { StyledNavItemProps, StyledAnchor, StyledNavItem } from './NavItem.styled'
 
-interface NavItemProps {
-  primary?: boolean;
+interface NavItemProps extends StyledNavItemProps {
   href: string;
   children: React.ReactNode;
 }

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { IStyledProps } from "/theme";
 
-interface StyledNavItemProps {
+export interface StyledNavItemProps {
   primary?: boolean;
 }
 
