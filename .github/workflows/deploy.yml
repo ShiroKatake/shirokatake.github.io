@@ -19,6 +19,7 @@ jobs:
       install_outcome: ${{ steps.installOutcome.outputs.stepOutcome }}
       test_outcome: ${{ steps.testOutcome.outputs.stepOutcome }}
       build_outcome: ${{ steps.buildOutcome.outputs.stepOutcome }}
+      export_outcome: ${{ steps.exportOutcome.outputs.stepOutcome }}
       deploy_outcome: ${{ steps.deployOutcome.outputs.stepOutcome }}
     steps:
       - name: 🔎 Checkout
@@ -51,6 +52,13 @@ jobs:
       - id: buildOutcome
         if: always()
         run: echo "::set-output name=stepOutcome::${{ steps.build.outcome }}" 
+
+      - name: 🔧 Export
+        id: export
+        run: npm run export
+      - id: exportOutcome
+        if: always()
+        run: echo "::set-output name=stepOutcome::${{ steps.export.outcome }}" 
 
       - name: 🚀 Deploy
         id: deploy
@@ -100,6 +108,8 @@ jobs:
             `${{ needs.deploy.outputs.test_outcome }}`
             **BUILD**
             `${{ needs.deploy.outputs.build_outcome }}`
+            **EXPORT**
+            `${{ needs.deploy.outputs.export_outcome }}`
             **DEPLOY**
             `${{ needs.deploy.outputs.deploy_outcome }}`
           include-details: "false"
