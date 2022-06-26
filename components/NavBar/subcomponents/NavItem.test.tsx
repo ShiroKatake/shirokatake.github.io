@@ -22,8 +22,9 @@ describe("NavItem", () => {
   
   it("should render correct text and href", () => {
     renderTest();
-    const navItem = screen.getByRole("link", {name: /Test nav item/i});
+    const navItem = screen.getByRole("link", {name: /Test nav item/i}) as HTMLAnchorElement;
     
+    expect(navItem.href).toBe("http://localhost/somewhere.com");
     expect(navItem).toBeInTheDocument();
   });
 
