@@ -9,6 +9,6 @@ export const StyledHeader = styled.header`
 export const StyledNavList = styled.ul`
   display: flex;
   height: 64px;
-  gap: 30px;
-  padding: 0 20px;
+  gap: 1.5rem;
+  padding: 0 1rem;
 `;
