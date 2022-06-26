@@ -11,7 +11,8 @@
     "watch": "jest --coverage --watch",
     "test": "jest --coverage",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "export": "next export"
   },
   "dependencies": {
     "@types/jest": "^28.1.3",
