@@ -49,6 +49,7 @@ const reset = css`
 
   a, a:visited {
     color: inherit;
+    cursor: pointer;
   }
 
   *,
