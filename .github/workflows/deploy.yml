@@ -39,7 +39,6 @@ jobs:
       - name: 🧪 Test
         id: test
         run: npm test
-        run: echo "::set-output name=stepOutcome::${{ steps.test.outcome }}"
       - id: testOutcome
         if: always()
         run: echo "::set-output name=stepOutcome::${{ steps.test.outcome }}"        
