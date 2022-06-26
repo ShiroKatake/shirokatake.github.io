@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaQueries } from "/theme";
+import { mediaQueries } from "../../theme";
 
 const { sm } = mediaQueries;
 
