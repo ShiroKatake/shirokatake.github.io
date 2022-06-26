@@ -65,7 +65,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:
           deploy_key: ${{ secrets.DEPLOY_KEY }}
-          publish_dir: ./build
+          publish_dir: ./out
       - id: deployOutcome
         if: always()
         run: echo "::set-output name=stepOutcome::${{ steps.deploy.outcome }}" 
