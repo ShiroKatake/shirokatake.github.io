@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+#deploy keys
+gh-pages
+gh-pages.pub
+
 # testing
 /coverage
 
