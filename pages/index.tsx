@@ -4,20 +4,19 @@ import { client } from 'sanity.config';
 import { Projects } from '/containers';
 
 type HomePageProps = {
-  homeData: any;
+  projectsData: any;
 }
 
-const homeQuery = `*[_type == 'gameProject']`;
+const projectsQuery = `*[_type == "gameProject" && includeInPortfolio == true]`;
 
-const HomePage: NextPage<HomePageProps> = ({ homeData }) => {
+const HomePage: NextPage<HomePageProps> = ({ projectsData }) => {
   return (
     <>
       <Head>
         <title>Khang Trinh</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {console.log(homeData)}
-      <Projects/>
+      <Projects projectsData={projectsData}/>
     </>
   );
 };
@@ -25,6 +24,6 @@ const HomePage: NextPage<HomePageProps> = ({ homeData }) => {
 export default HomePage;
 
 export async function getStaticProps() {
-  const homeData = await client.fetch(homeQuery);
-  return { props: { homeData } };
+  const projectsData = await client.fetch(projectsQuery);
+  return { props: { projectsData } };
 }
