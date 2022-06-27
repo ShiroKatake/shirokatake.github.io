@@ -1,7 +1,7 @@
 import { Grid } from '../../components';
-import { StyledRow, StyledCol } from './Home.styled';
+import { StyledRow, StyledCol } from './Projects.styled';
 
-export const Home:React.FC = () => {
+export const Projects:React.FC = () => {
   return (
     <Grid>
       <StyledRow center='xs'>

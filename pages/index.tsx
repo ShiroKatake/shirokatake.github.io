@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { client } from 'sanity.config';
-import { Home } from '/containers';
+import { Projects } from '/containers';
 
 type HomePageProps = {
   homeData: any;
@@ -17,7 +17,7 @@ const HomePage: NextPage<HomePageProps> = ({ homeData }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {console.log(homeData)}
-      <Home/>
+      <Projects/>
     </>
   );
 };
