@@ -4,7 +4,7 @@ export interface Project {
   _id: string;
   _updatedAt: string;
   projectName: string;
-  coverImage?: Image;
+  coverImage: Image;
   releaseDate?: string;
   repoUrl?: string;
 }

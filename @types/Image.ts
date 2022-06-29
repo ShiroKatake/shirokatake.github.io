@@ -1,4 +1,4 @@
-export type Image = {
+export interface Image {
   _type: "image",
   asset: {
     _ref: string;
