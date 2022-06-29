@@ -3,7 +3,12 @@ import { mediaQueries } from "../../theme";
 
 const { sm } = mediaQueries;
 
-export const StyledSocialBar = styled.aside`
+export const SocialBarContainer = styled.aside`
+  position: sticky;
+  bottom: 0;
+`;
+
+export const StyledSocialBar = styled.div`
   display: none;
   
   @media ${sm} {
