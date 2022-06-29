@@ -13,7 +13,6 @@ function Main({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const init = async () => {
       if (typeof window !== "undefined") {
-        console.log(typeof window);
         const getCurrentViewport = (await import('../utils/getCurrentViewport')).getCurrentViewport;
         const flexboxViewport = getCurrentViewport(windowWidth);
     
