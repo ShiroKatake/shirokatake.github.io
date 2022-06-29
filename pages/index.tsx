@@ -7,7 +7,7 @@ type HomePageProps = {
   projectsData: any;
 }
 
-const projectsQuery = `*[_type == "gameProject" && includeInPortfolio == true]`;
+const projectsQuery = `*[_type == "gameProject" && includeInPortfolio == true] | order(releaseDate desc)`;
 
 const HomePage: NextPage<HomePageProps> = ({ projectsData }) => {
   return (
