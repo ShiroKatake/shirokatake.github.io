@@ -26,3 +26,11 @@ export const ProjectContainer = styled.div`
 export const ProjectRow = styled(Row)`
   gap: 3rem;
 `;
+
+export const ProjectCol = styled(Col)`
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
