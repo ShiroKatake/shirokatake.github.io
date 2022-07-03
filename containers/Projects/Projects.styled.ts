@@ -8,7 +8,7 @@ export const StyledGrid = styled(Grid)`
 `;
 
 export const StyledRow = styled(Row)`
-  padding: 2rem 0;
+  padding-top: 2rem;
 `;
 
 export const StyledCol = styled(Col)`
@@ -21,6 +21,7 @@ export const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  padding: 3rem 0;
 `;
 
 export const ProjectRow = styled(Row)`

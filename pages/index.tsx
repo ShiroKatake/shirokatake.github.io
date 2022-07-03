@@ -9,20 +9,30 @@ type HomePageProps = {
 
 const projectTypeQuery = `*[_type == "portfolioSettings"].projectDisplay`
 const projectsQuery = (projectType: string) => `
-*[_type == "${projectType}" && includeInPortfolio == true]{
-  projectName,
-  releaseDate,
-  repoUrl,
-  storeUrl,
-  coverImage {
-    "url": asset->url,
-    "altText": asset->altText
-  },
-  supportImages[] {
-    "url": asset->url,
-    "altText": asset->altText
-  }
-} | order(releaseDate desc)
+  *[_type == "${projectType}" && includeInPortfolio == true]{
+    projectName,
+    releaseDate,
+    repoUrl,
+    storeUrl,
+    coverImage {
+      "url": asset->url,
+      "altText": asset->altText
+    },
+    supportImages[] {
+      "url": asset->url,
+      "altText": asset->altText
+    },
+    "videoPreview": videoPreview[0] {
+      aspectratio,
+      caption,
+      altText,
+      "url": mp4.asset->url,
+      "imageFallbackUrl": fallback {
+        "url": asset->url,
+        "altText": asset->altText
+      },
+    }
+  } | order(releaseDate desc)
 `;
 const HomePage: NextPage<HomePageProps> = ({ projectsData }) => {
   return (

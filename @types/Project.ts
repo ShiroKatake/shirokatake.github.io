@@ -5,13 +5,21 @@ export interface Project {
   _updatedAt: string;
   projectName: string;
   coverImage: Image;
-  releaseDate?: string;
+  releaseDate: string;
   repoUrl?: string;
+  supportImages?: Image[];
+  videoPreview: {
+    altText: string;
+    aspectratio: number;
+    caption: string;
+    imageFallback: Image
+    url: string;
+  };
 }
 
 export interface GameProject extends Project {
   _type: 'gameProject';
-  storeUrl?: string;
+  storeUrl: string;
 }
 
 export interface WebProject extends Project {
