@@ -18,7 +18,7 @@ export const ProjectCard:React.FC<ProjectCardProps> = ({project}) => {
   }
 
   return (
-    <CardContainer data-testid="projectcard-container" onMouseOut={() => resetVideo()}>
+    <CardContainer data-testid="projectcard-container" onMouseLeave={() => resetVideo()}>
       <StyledCoverImage priority onTransitionEnd={() => playVideo()} src={project.coverImage.url} alt="" layout="fill" objectFit="contain"/>
       <ProjectDescription>
         {project.videoPreview &&
