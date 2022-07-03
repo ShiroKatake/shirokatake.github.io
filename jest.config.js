@@ -10,7 +10,7 @@ module.exports = {
   testPathIgnorePatterns: [
     "<rootDir>/.next/",
     "<rootDir>/node_modules/",
-    "<rootDir>/pages/",
+    "<rootDir>/pages/*.tsx",
     "<rootDir>/coverage/",
     "<rootDir>/public/",
   ],
@@ -27,6 +27,8 @@ module.exports = {
     },
   },
   collectCoverageFrom: [
+    "pages/**/*.{ts,tsx}",
+    "!pages/*.{ts,tsx}",
     "components/**/*.{ts,tsx}",
     "!components/FlexboxGrid/FlexboxGrid.tsx",
     "containers/**/*.{ts,tsx}",
