@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { client } from 'sanity.config';
-import { Projects } from '/containers';
+import { Projects } from './Projects/Projects';
 
 type HomePageProps = {
   projectsData: any;

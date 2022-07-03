@@ -1,4 +1,4 @@
-import { ProjectCard } from './components/ProjectCard';
+import { ProjectCard } from './page-components/ProjectCard';
 import { StyledGrid, StyledRow, StyledCol, ProjectContainer, ProjectRow, ProjectCol } from './Projects.styled';
 import { GameProject, Project, WebProject } from '/@types/Project';
 
