@@ -19,7 +19,7 @@
     "paths": {
       "/*": ["./*"],
       "assets/*": ["assets/*"],
-      "components/*": ["components/*"],
+      "components/*": ["global-components/*"],
       "context/*": ["context/*"],
       "hooks/*": ["hooks/*"],
       "models/*": ["models/*"],

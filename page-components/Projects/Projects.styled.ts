@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Grid, Col, Row } from "../../components";
+import { Grid, Col, Row } from "../../global-components";
 
 export const StyledGrid = styled(Grid)`
   display: flex;

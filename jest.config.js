@@ -27,9 +27,7 @@ module.exports = {
     },
   },
   collectCoverageFrom: [
-    "pages/**/*.{ts,tsx}",
-    "!pages/*.{ts,tsx}",
-    "components/**/*.{ts,tsx}",
+    "*components/**/*.{ts,tsx}",
     "!components/FlexboxGrid/FlexboxGrid.tsx",
     "containers/**/*.{ts,tsx}",
     "utils/**/*.{ts}",

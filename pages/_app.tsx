@@ -4,7 +4,7 @@ import { useWindowWidth } from '/hooks/useWindowWidth';
 import { GlobalStyle } from '/styles/globalStyle';
 import { ThemeProvider } from 'styled-components';
 import { Theme as theme } from '/theme';
-import { NavBar, SocialBar } from '/components';
+import { NavBar, SocialBar } from '../global-components';
 
 function Main({ Component, pageProps }: AppProps) {
   const [Theme, setTheme] = useState(theme);
