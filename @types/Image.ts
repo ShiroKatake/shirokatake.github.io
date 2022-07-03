@@ -1,4 +1,4 @@
 export interface Image {
   url: string;
-  altText: string;
+  altText: string | null;
 }

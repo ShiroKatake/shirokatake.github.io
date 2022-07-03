@@ -1,28 +1,24 @@
 import { Image } from "./Image";
 
 export interface Project {
-  _id: string;
-  _updatedAt: string;
   projectName: string;
   coverImage: Image;
   releaseDate: string;
-  repoUrl?: string;
-  supportImages?: Image[];
+  repoUrl: string | null;
+  supportImages: Image[] | null;
   videoPreview: {
-    altText: string;
-    aspectratio: number;
-    caption: string;
-    imageFallback: Image
+    altText: string | null;
+    aspectratio: number | null;
+    caption: string | null;
+    imageFallback: Image | null;
     url: string;
   };
 }
 
 export interface GameProject extends Project {
-  _type: 'gameProject';
   storeUrl: string;
 }
 
 export interface WebProject extends Project {
-  _type: 'webProject';
-  publicUrl?: string;
+  publicUrl: string;
 }
