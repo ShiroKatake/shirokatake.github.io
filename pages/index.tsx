@@ -7,6 +7,20 @@ type HomePageProps = {
   projectsData: any;
 }
 
+const HomePage: NextPage<HomePageProps> = ({ projectsData }) => {
+  return (
+    <>
+      <Head>
+        <title>Khang Trinh</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Projects projectsData={projectsData}/>
+    </>
+  );
+};
+
+export default HomePage;
+
 const projectTypeQuery = `*[_type == "portfolioSettings"].projectDisplay`
 const projectsQuery = (projectType: string) => `
   *[_type == "${projectType}" && includeInPortfolio == true]{
@@ -35,19 +49,6 @@ const projectsQuery = (projectType: string) => `
     }
   } | order(releaseDate desc)
 `;
-const HomePage: NextPage<HomePageProps> = ({ projectsData }) => {
-  return (
-    <>
-      <Head>
-        <title>Khang Trinh</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Projects projectsData={projectsData}/>
-    </>
-  );
-};
-
-export default HomePage;
 
 export async function getStaticProps() {
   const projectType = await client.fetch(projectTypeQuery);
