@@ -8,6 +8,7 @@
     "releaseDate": "2021-06-19",
     "repoUrl": "https://github.com/Squishyblox/GMTK_GeekLatte",
     "storeUrl": "https://geeklatte.itch.io/together",
+    "summary": null,
     "supportImages": null,
     "videoPreview": {
       "altText": null,
@@ -26,6 +27,46 @@
     "releaseDate": "2020-11-17",
     "repoUrl": "https://github.com/ShiroKatake/capstone-project-2020-P.O.D",
     "storeUrl": "https://space-magic-games.itch.io/pod",
+    "summary": "A real-time strategy game featuring resource and building management, and wave based combat",
+    "supportImages": [
+      {
+        "altText": "The player building defensive structure",
+        "url": "https://cdn.sanity.io/images/me5qn7sh/production/c5e6983d15dc7262f4ee65c55e50acc769863794-1909x1058.png"
+      },
+      {
+        "altText": "The player with a working base during the day",
+        "url": "https://cdn.sanity.io/images/me5qn7sh/production/6b7511577d209c2d2152f8fb498204f26d54ba1c-1920x1080.png"
+      },
+      {
+        "altText": "The player defending base mid invasion battle",
+        "url": "https://cdn.sanity.io/images/me5qn7sh/production/3b88639abdbe4ab12f34b82bbd3459f8047a57ce-1923x1084.png"
+      },
+      {
+        "altText": "The player swarmed by alien enemies",
+        "url": "https://cdn.sanity.io/images/me5qn7sh/production/ee3b4bab0d1d7b19859c7f95d84a3682a0a7d61b-1920x1080.png"
+      }
+    ],
+    "videoPreview": {
+      "altText": null,
+      "aspectratio": 1.7,
+      "caption": null,
+      "imageFallback": {
+        "altText": null,
+        "url": "https://cdn.sanity.io/images/me5qn7sh/production/1f67cff62a6c7f898521302d40ccbced558097a9-1920x1080.jpg"
+      },
+      "url": "https://cdn.sanity.io/files/me5qn7sh/production/2e7b39a42da29cbcf6e4ff74df8b3b3aad102cef.mp4"
+    }
+  },
+  {
+    "coverImage": {
+      "altText": "Game: Project POD",
+      "url": "https://cdn.sanity.io/images/me5qn7sh/production/add039a056d4fc37edd675de4954f1781420e27f-1080x1080.png"
+    },
+    "projectName": "Project P.O.D",
+    "releaseDate": "2020-11-17",
+    "repoUrl": "https://github.com/ShiroKatake/capstone-project-2020-P.O.D",
+    "storeUrl": "https://space-magic-games.itch.io/pod",
+    "summary": "A real-time strategy game featuring resource and building management, and wave based combat",
     "supportImages": [
       {
         "altText": "The player building defensive structure",
@@ -64,6 +105,7 @@
     "releaseDate": "2019-11-19",
     "repoUrl": "https://github.com/ShiroKatake/elementum",
     "storeUrl": "https://shirokatake.itch.io/elementum",
+    "summary": null,
     "supportImages": null,
     "videoPreview": {
       "altText": null,
@@ -82,6 +124,7 @@
     "releaseDate": "2019-08-17",
     "repoUrl": "https://github.com/ShiroKatake/hypothermia",
     "storeUrl": "https://squishyblob.itch.io/hypothermia",
+    "summary": null,
     "supportImages": null,
     "videoPreview": {
       "altText": null,

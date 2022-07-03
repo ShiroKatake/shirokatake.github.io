@@ -6,6 +6,7 @@ export interface Project {
   releaseDate: string;
   repoUrl: string | null;
   supportImages: Image[] | null;
+  summary: string | null;
   videoPreview: {
     altText: string | null;
     aspectratio: number | null;
