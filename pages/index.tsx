@@ -11,6 +11,7 @@ const projectTypeQuery = `*[_type == "portfolioSettings"].projectDisplay`
 const projectsQuery = (projectType: string) => `
   *[_type == "${projectType}" && includeInPortfolio == true]{
     projectName,
+    summary,
     releaseDate,
     repoUrl,
     storeUrl,
@@ -27,7 +28,7 @@ const projectsQuery = (projectType: string) => `
       caption,
       altText,
       "url": mp4.asset->url,
-      "imageFallbackUrl": fallback {
+      "imageFallback": fallback {
         "url": asset->url,
         "altText": asset->altText
       },
