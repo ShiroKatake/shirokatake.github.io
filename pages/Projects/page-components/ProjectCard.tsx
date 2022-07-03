@@ -10,27 +10,25 @@ export const ProjectCard:React.FC<ProjectCardProps> = ({project}) => {
   const video = useRef<HTMLVideoElement>(null);
 
   const playVideo = () => {
-    video.current && video.current.play();
+    video.current!.play();
   }
   const resetVideo = () => {
-    if (video.current) {
-      video.current.pause();
-      video.current.currentTime = 0;
-    }
+    video.current!.pause();
+    video.current!.currentTime = 0;
   }
 
   return (
-    <CardContainer onMouseOut={() => resetVideo()}>
-      <StyledCoverImage onTransitionEnd={() => playVideo()} src={project.coverImage.url} alt="" layout="fill" objectFit="contain"/>
+    <CardContainer data-testid="projectcard-container" onMouseOut={() => resetVideo()}>
+      <StyledCoverImage priority onTransitionEnd={() => playVideo()} src={project.coverImage.url} alt="" layout="fill" objectFit="contain"/>
       <ProjectDescription>
         {project.videoPreview &&
-          <StyledVideo ref={video} loop muted playsInline>
+          <StyledVideo data-testid="projectcard-video" ref={video} loop muted playsInline>
             <source src={project.videoPreview.url} type="video/mp4" />
           </StyledVideo>
         }
         <TextDesscription>
           <h2>{project.projectName}</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <p>{project.summary}</p>
         </TextDesscription>
       </ProjectDescription>
     </CardContainer>
