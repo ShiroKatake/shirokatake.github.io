@@ -23,7 +23,7 @@ window.HTMLMediaElement.prototype.pause = () => pauseMock();
 describe("ProjectCard", () => {
   let user;
   beforeAll(() => {
-    user = userEvent.setup()
+    user = userEvent.setup();
     renderTest();
   });
 
