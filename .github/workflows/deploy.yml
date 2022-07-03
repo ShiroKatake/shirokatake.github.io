@@ -42,23 +42,26 @@ jobs:
         run: npm test
       - id: testOutcome
         if: always()
-        run: echo "::set-output name=stepOutcome::${{ steps.test.outcome }}"        
+        run: echo "::set-output name=stepOutcome::${{ steps.test.outcome }}"
 
       - name: 🔧 Build
         id: build
         run: npm run build
         env:
           CI: false
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          NEXT_PUBLIC_SANITY_DATASET: ${{ NEXT_PUBLIC_SANITY_DATASET }}
+          NEXT_PUBLIC_SANITY_API_VERSION: ${{ NEXT_PUBLIC_SANITY_API_VERSION }}
       - id: buildOutcome
         if: always()
-        run: echo "::set-output name=stepOutcome::${{ steps.build.outcome }}" 
+        run: echo "::set-output name=stepOutcome::${{ steps.build.outcome }}"
 
       - name: 🔧 Export
         id: export
         run: npm run export
       - id: exportOutcome
         if: always()
-        run: echo "::set-output name=stepOutcome::${{ steps.export.outcome }}" 
+        run: echo "::set-output name=stepOutcome::${{ steps.export.outcome }}"
 
       - name: 🚀 Deploy
         id: deploy
@@ -68,7 +71,7 @@ jobs:
           publish_dir: ./out
       - id: deployOutcome
         if: always()
-        run: echo "::set-output name=stepOutcome::${{ steps.deploy.outcome }}" 
+        run: echo "::set-output name=stepOutcome::${{ steps.deploy.outcome }}"
 
   notifyDiscord:
     needs: deploy
